@@ -1,12 +1,13 @@
-import { func, number } from 'prop-types';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { apiKey, hash } from './ApiPasswords';
+import { useNavigate } from 'react-router-dom';
 
-const CharacterList = ({  onCharacterSelect }) => {
+const CharacterList = () => {
     // Instantiate the list of characters and the 'offset' which refers to where the list of characters will begin
     const [characters,setCharacters] = useState([]);
     const [offset, setOffset] = useState(0);
+    const navigate = useNavigate();
 
     // Refetch whenever offset changes
     useEffect(() => {
@@ -43,7 +44,7 @@ const CharacterList = ({  onCharacterSelect }) => {
             <div className="row g-4">
                 {characters.length>0 ?
                     (characters.map(character => (
-                            <a className="col-md-4 mb-3" key={character.id} href={'#character-detail'}  onClick={() => onCharacterSelect(character.id)}>
+                            <a className="col-md-4 mb-3" key={character.id} href={'#character-detail'}  onClick={() => navigate(`/characters/${character.id}`)}>
                                         <div className="card cardHover">
                                             <center><img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} style={{height:300}} className={"card-img-top rounded"} alt={`${character.name} Image`}/></center>
                                             <div className="card-body">
@@ -72,11 +73,6 @@ const CharacterList = ({  onCharacterSelect }) => {
                 : null}
         </div>
     );
-}
-
-CharacterList.propTypes = {
-    selectedCharacter: number, // The character id
-    onCharacterSelect: func // Function to update the character id when clicked
 }
 
 export default CharacterList;

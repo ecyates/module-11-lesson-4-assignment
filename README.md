@@ -4,13 +4,15 @@ Author: Elizabeth Yates
 In this repository, I completed the following assignment
 
 ## 1. Building a Comic Book Library with React Router
+
 **Objective**: The objective of this assignment is to develop a fundamental understanding of setting up routes in a React application using the React Router. You will create a comic book library management system with different pages for various features like browsing characters, viewing character details, and exploring comics. This exercise will enhance your ability to create single-page applications in React.
 
 **Problem Statement**: Your task is to set up a basic structure for a Comic Book Library Management System using React. The application should have different pages for 'Home', 'Browse Characters', 'Character Details', and 'Comics'. You will be creating the routes and setting up empty components for each page. We've created most of the components in previous lessons. So, reuse those components.
 
 ### Task 1: Install and Setup React Router
 
-- Initialize a new React project or build off of the Marvel Comics API comic project. Make sure to use the Marvel API and install the latest version of the React Router.
+- Initialize a new React project or build off of the Marvel Comics API comic project. 
+- Make sure to use the Marvel API and install the latest version of the React Router.
 - Set up React Router in your application.
 
 **Expected Outcome**:
@@ -44,7 +46,8 @@ In this repository, I completed the following assignment
 
 ### Task 3: Setting Up Routes
 
-- In your application's main file, set up routes using BrowserRouter and Route from React Router. Assign each route to the corresponding component.
+- In your application's main file, set up routes using BrowserRouter and Route from React Router. 
+- Assign each route to the corresponding component.
 
 **Expected Outcome**:
 - The application should have a basic routing setup with Home, BrowseCharacters, CharacterDetails, and Comics accessible via different paths.

@@ -7,6 +7,7 @@ import HomePage from './components/HomePage';
 import NavBar from './components/NavBar';
 import NotFound from './components/NotFound';
 import Comics from './components/Comics';
+import ComicDetail from './components/ComicDetail';
 
 const App =()=> {
   // Keep track of the character that's clicked on. 
@@ -26,6 +27,7 @@ const App =()=> {
         <Route path='/characters/' element={<CharacterList/>}/>
         <Route path='/characters/:id' element={<CharacterDetail/>}/>
         <Route path='/comics/' element={<Comics/>}/>
+        <Route path='/comics/:id' element={<ComicDetail/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </>
